@@ -1,63 +1,9 @@
-/* Reset */
-body, h2 {
-  margin: 0;
-  padding: 0;
-}
-
+/* Custom styles in addition to Tailwind */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #f3f4f6;
-  font-family: Arial, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
-/* Card container */
-.card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 300px;
-}
-
-/* Heading */
-.card h2 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* Input fields */
-.input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  outline: none;
-}
-
-.input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 5px rgba(59,130,246,0.4);
-}
-
-/* Button */
-.btn {
-  background: #3b82f6;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  margin-top: 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  width: 100%;
-}
-
-.btn:hover {
-  background: #2563eb;
+/* Modal backdrop (if you add modals later) */
+.backdrop {
+  background: rgba(0, 0, 0, 0.45);
 }
