@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inventory Tracker (CRUD)</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- Login -->
+  <main id="app" class="max-w-4xl mx-auto p-6">
+    <div id="loginScreen" class="max-w-md mx-auto mt-12 bg-white rounded-xl shadow p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Inventory Tracker — Login</h2>
+      <form id="loginForm" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Username</label>
+          <input id="username" class="w-full border rounded px-3 py-2" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Password</label>
+          <input id="password" type="password" class="w-full border rounded px-3 py-2" required />
+        </div>
+        <div class="flex justify-between items-center">
+          <!-- 👇 This hint will update dynamically from app.js -->
+          <div id="loginHint" class="text-sm text-gray-500"></div>
+          <button class="bg-blue-600 text-white px-4 py-2 rounded" type="submit">Sign in</button>
+        </div>
+        <div id="loginError" class="text-red-500 text-sm hidden">Invalid credentials</div>
+      </form>
+    </div>
+
+    
+  <script src="app.js"></script>
+</body>
+</html>
