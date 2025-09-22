@@ -34,6 +34,66 @@
       </form>
     </div>
 
+    <!-- Main -->
+    <div id="mainApp" class="hidden">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">Inventory Tracker</h1>
+        <div class="flex items-center gap-3">
+          <button id="exportCSV" class="px-3 py-2 bg-green-600 text-white rounded">Export CSV</button>
+          <button id="logoutBtn" class="px-3 py-2 bg-red-500 text-white rounded">Logout</button>
+        </div>
+      </div>
+
+<!-- Create Form -->
+      <div class="bg-white p-4 rounded shadow mb-6">
+        <h2 class="font-semibold mb-3">Create Part</h2>
+        <form id="createForm" class="space-y-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input id="partName" placeholder="Name *" class="border rounded px-3 py-2" required />
+            <input id="partCategory" placeholder="Category *" class="border rounded px-3 py-2" required />
+            <input id="partQuantity" placeholder="Quantity *" type="number" min="0" class="border rounded px-3 py-2" required />
+            <input id="partLocation" placeholder="Location" class="border rounded px-3 py-2" />
+          </div>
+          <textarea id="partNotes" rows="2" placeholder="Notes" class="w-full border rounded px-3 py-2"></textarea>
+          <div class="flex justify-end">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded" type="submit">Add Part</button>
+          </div>
+          <div id="createError" class="text-red-500 text-sm hidden">Please fill required fields correctly.</div>
+        </form>
+      </div>
+
+
+       <!-- Filter & Search -->
+      <div class="bg-white p-4 rounded shadow mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <select id="filterCategory" class="border rounded px-3 py-2">
+          <option value="">-- Filter by category --</option>
+        </select>
+        <input id="searchBox" placeholder="Search name or notes..." class="border rounded px-3 py-2" />
+        <div class="text-sm text-gray-600"><strong>Total parts:</strong> <span id="totalCount">0</span></div>
+      </div>
+
+      <!-- Parts table -->
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-semibold mb-3">Parts</h2>
+        <div id="emptyState" class="text-gray-500 p-6 text-center">No parts added yet — add one using the form above.</div>
+        <div class="overflow-x-auto">
+          <table id="partsTable" class="min-w-full table-auto hidden">
+            <thead>
+              <tr class="text-left border-b">
+                <th class="p-2">Name</th>
+                <th class="p-2">Category</th>
+                <th class="p-2">Qty</th>
+                <th class="p-2">Location</th>
+                <th class="p-2">Notes</th>
+                <th class="p-2">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="partsTbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
     
   <script src="script.js"></script>
 </body>
