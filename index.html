@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Inventory Tracker (CRUD)</title>
 
+  <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
 
-  <!-- Login -->
+  <!-- Login screen -->
   <main id="app" class="max-w-4xl mx-auto p-6">
     <div id="loginScreen" class="max-w-md mx-auto mt-12 bg-white rounded-xl shadow p-6">
+
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
+         alt="Inventory Icon" 
+         class="w-20 h-20 mx-auto mb-4">
+
+         
       <h2 class="text-2xl font-semibold mb-4 text-center">Inventory Tracker — Login</h2>
       <form id="loginForm" class="space-y-4">
         <div>
@@ -34,7 +42,7 @@
       </form>
     </div>
 
-    <!-- Main -->
+    <!-- Main App -->
     <div id="mainApp" class="hidden">
       <div class="flex justify-between items-center mb-6">
         <h1 class="text-3xl font-bold">Inventory Tracker</h1>
@@ -44,7 +52,7 @@
         </div>
       </div>
 
-<!-- Create Form -->
+      <!-- Create Form -->
       <div class="bg-white p-4 rounded shadow mb-6">
         <h2 class="font-semibold mb-3">Create Part</h2>
         <form id="createForm" class="space-y-3">
@@ -62,8 +70,7 @@
         </form>
       </div>
 
-
-       <!-- Filter & Search -->
+      <!-- Filter & Search -->
       <div class="bg-white p-4 rounded shadow mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <select id="filterCategory" class="border rounded px-3 py-2">
           <option value="">-- Filter by category --</option>
@@ -94,8 +101,8 @@
       </div>
     </div>
   </main>
-    
-  <script src="script.js"></script>
+
+  <!-- External JS -->
+  <script src="app.js"></script>
 </body>
 </html>
-
